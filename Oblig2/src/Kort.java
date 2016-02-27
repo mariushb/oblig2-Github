@@ -51,8 +51,15 @@ public abstract class Kort implements Comparable<Kort>, Cloneable {
 
 	public abstract boolean sjekkPIN(int pin);
 
-	
-
+	@Override
+	public int compareTo(Kort k) {
+		int alfabetisk = this.getEtternavn().compareTo(k.getEtternavn());
+			if (alfabetisk == 0) {
+				alfabetisk = this.getFornavn().compareTo(k.getFornavn());
+			}
+			return alfabetisk;
+	}
+			
 	@Override
 	public Object clone() throws CloneNotSupportedException {
 		return super.clone();
