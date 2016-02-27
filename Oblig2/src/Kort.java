@@ -8,7 +8,7 @@ public abstract class Kort implements Comparable<Kort>, Cloneable {
 	private int kortnummer;
 	private int aksesskode;
 	private boolean sperretKort;
-	private static int antallkort = 100000;
+	private static int antallKort = 100000;
 
 	public Kort(String fornavn, String etternavn, int pin) {
 		super();
@@ -16,7 +16,7 @@ public abstract class Kort implements Comparable<Kort>, Cloneable {
 		this.fornavn = fornavn;
 		this.etternavn = etternavn;
 		this.pin = pin;
-		this.kortnummer = ++antallkort;
+		this.kortnummer = ++antallKort;
 		this.aksesskode = aksesskode;
 		this.sperretKort = false;
 	}
@@ -70,5 +70,11 @@ public abstract class Kort implements Comparable<Kort>, Cloneable {
 		return "Kort \nOpprettet: " + dateCreated.getTime() + "\nNavn: " + fornavn + " " + etternavn + "\nPin: " + pin
 				+ "\nKortnummer: " + kortnummer + "\nAksesskode: " + aksesskode + "\nSperret: " + sperretKort + "\n\n";
 	}
+
+	public String hentEtternavn() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 
 }
