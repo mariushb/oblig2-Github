@@ -52,10 +52,10 @@ public abstract class Kort implements Comparable<Kort>, Cloneable {
 	public abstract boolean sjekkPIN(int pin);
 
 	@Override
-	public int compareTo(Kort k) {
-		int alfabetisk = this.getEtternavn().compareTo(k.getEtternavn());
+	public int compareTo(Kort n) {
+		int alfabetisk = this.getEtternavn().compareTo(n.getEtternavn());
 			if (alfabetisk == 0) {
-				alfabetisk = this.getFornavn().compareTo(k.getFornavn());
+				alfabetisk = this.getFornavn().compareTo(n.getFornavn());
 			}
 			return alfabetisk;
 	}
